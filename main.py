@@ -1,14 +1,14 @@
 from fastapi import FastAPI
 
-from models import channel_model
-from models import message_model
-from models import user_model
+from src.models import channel_model
+from src.models import message_model
+from src.models import user_model
 
-from routers import message_router
-from routers import channel_router
-from routers import user_router
+from src.routers import message_router
+from src.routers import channel_router
+from src.routers import user_router
 
-from database import db
+from src.database import db
 
 app = FastAPI()
 
