@@ -23,9 +23,9 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-channel_model.Base.metadata.create_all(bind=db.engine)
-message_model.Base.metadata.create_all(bind=db.engine)
-user_model.Base.metadata.create_all(bind=db.engine)
+channel_model.Base.metadata.create_all(bind=db.engine, checkfirst=True)
+message_model.Base.metadata.create_all(bind=db.engine, checkfirst=True)
+user_model.Base.metadata.create_all(bind=db.engine, checkfirst=True)
 
 app.include_router(message_router.router, prefix=BASE_PATH, tags=['messages'])
 app.include_router(channel_router.router, prefix=BASE_PATH, tags=['channels'])
