@@ -23,8 +23,6 @@ def get_db():
     finally:
         db.close()
         
-channel_model.Base.metadata.create_all(bind=engine)
-
 @router.get('/')
 async def read_all(db: Session = Depends(get_db)):
     data = db.query(channel_model.Channel).all()

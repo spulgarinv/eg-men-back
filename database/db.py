@@ -4,6 +4,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 engine = create_engine(
     'sqlite:///men.sqlite',
+    echo=True,
     connect_args={'check_same_thread': False}
     )
 
