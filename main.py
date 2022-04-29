@@ -10,7 +10,7 @@ from routers import user_router
 
 from database import db
 
-app = FastAPI()
+app = FastAPI(root_path='/api/v1')
 
 channel_model.Base.metadata.create_all(bind=db.engine)
 message_model.Base.metadata.create_all(bind=db.engine)

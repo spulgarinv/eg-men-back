@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app --root-path /api/v1
+web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
