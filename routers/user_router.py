@@ -22,8 +22,6 @@ def get_db():
         yield db
     finally:
         db.close()
-        
-user_model.Base.metadata.create_all(bind=engine)
 
 @router.get('/')
 async def read_all(db: Session = Depends(get_db)):
